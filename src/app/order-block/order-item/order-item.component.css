@@ -1,0 +1,9 @@
+div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.name {
+  width: 100px;
+}

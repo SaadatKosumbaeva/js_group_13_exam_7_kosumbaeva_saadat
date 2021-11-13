@@ -1,0 +1,9 @@
+div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+app-item {
+  flex-basis: 50%;
+}

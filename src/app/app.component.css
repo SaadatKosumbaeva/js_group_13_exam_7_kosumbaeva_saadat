@@ -1,0 +1,22 @@
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.app-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.items-block {
+  width: 60%;
+}
+
+.order-block {
+  width: 30%;
+}
+
+fieldset {
+  border-radius: 5px;
+}
