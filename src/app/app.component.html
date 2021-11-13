@@ -2,12 +2,12 @@
   <div class="app-wrap">
     <fieldset class="order-block">
       <legend>Order details</legend>
-      <app-order-block></app-order-block>
+      <app-order-block [orderItems]="orderItems"></app-order-block>
     </fieldset>
 
     <fieldset class="items-block">
       <legend>Add items</legend>
-      <app-items-block [items]="items"></app-items-block>
+      <app-items-block [items]="items" (itemAdd)="onAddItem($event)"></app-items-block>
     </fieldset>
   </div>
 </div>

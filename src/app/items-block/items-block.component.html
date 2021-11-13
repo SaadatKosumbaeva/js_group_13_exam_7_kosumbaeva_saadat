@@ -1,5 +1,6 @@
 <div>
   <app-item *ngFor="let item of items; let i = index"
             [item]="item"
+            (itemClick)="clickItem(i)"
   ></app-item>
 </div>

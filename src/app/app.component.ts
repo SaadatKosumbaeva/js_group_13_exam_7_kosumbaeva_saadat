@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Item} from "./shared/item.module";
 
 @Component({
@@ -15,4 +15,19 @@ export class AppComponent {
     new Item('Fries', 45, 0, 'https://i.pinimg.com/736x/4d/c6/94/4dc694f26be0b74aa50828988ce1d4e6.jpg'),
     new Item('Cola', 40, 0, 'https://media.istockphoto.com/vectors/cartoon-with-contour-of-disposable-paper-cup-with-soda-and-straw-vector-id843213594?k=6&m=843213594&s=170667a&w=0&h=krYT1V8BjhIKviZWZHuTpaDtWSDZol7wzlH3km6sHcc='),
   ];
+
+  orderItems: Item[] = [];
+
+  onAddItem(index: number) {
+    if (this.orderItems.length > 0) {
+      let isIncludes = this.orderItems.includes(this.items[index]);
+      if (isIncludes) {
+        return;
+      } else {
+        this.orderItems.push(this.items[index]);
+      }
+    } else {
+      this.orderItems.push(this.items[index]);
+    }
+  }
 }
