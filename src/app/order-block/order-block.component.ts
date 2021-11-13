@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Item} from "../shared/item.module";
 
 @Component({
@@ -8,12 +8,19 @@ import {Item} from "../shared/item.module";
 })
 export class OrderBlockComponent {
   @Input() orderItems!: Item[];
+  @Output() itemDelete = new EventEmitter();
   orderIsEmpty = true;
 
   orderEmpty() {
     if (this.orderItems.length !== 0) {
       this.orderIsEmpty = false;
+    } else if (this.orderItems.length === 0) {
+      this.orderIsEmpty = true;
     }
     return this.orderIsEmpty;
+  }
+
+  onDeleteItem(index: number) {
+    this.itemDelete.emit(index);
   }
 }

@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Item} from "../../shared/item.module";
 
 @Component({
@@ -8,4 +8,9 @@ import {Item} from "../../shared/item.module";
 })
 export class OrderItemComponent {
   @Input() item!: Item;
+  @Output() itemDelete = new EventEmitter();
+
+  onItemDelete() {
+    this.itemDelete.emit();
+  }
 }

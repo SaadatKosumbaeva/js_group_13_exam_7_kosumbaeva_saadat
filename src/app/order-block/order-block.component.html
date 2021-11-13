@@ -2,4 +2,6 @@
   <p>Order is empty!</p>
   <p>Please add some items!</p>
 </div>
-<app-order-item *ngFor="let item of orderItems" [item]="item"></app-order-item>
+<app-order-item *ngFor="let item of orderItems; let i = index"
+                [item]="item"
+                (itemDelete)="onDeleteItem(i)"></app-order-item>

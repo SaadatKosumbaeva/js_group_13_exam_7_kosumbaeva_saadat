@@ -30,4 +30,10 @@ export class AppComponent {
       this.orderItems.push(this.items[index]);
     }
   }
+
+  deleteItem(index: number) {
+    this.orderItems.splice(index, 1);
+    if (this.orderItems.length === 0) {
+    }
+  }
 }

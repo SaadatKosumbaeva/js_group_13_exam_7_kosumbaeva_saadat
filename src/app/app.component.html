@@ -2,7 +2,7 @@
   <div class="app-wrap">
     <fieldset class="order-block">
       <legend>Order details</legend>
-      <app-order-block [orderItems]="orderItems"></app-order-block>
+      <app-order-block [orderItems]="orderItems" (itemDelete)="deleteItem($event)"></app-order-block>
     </fieldset>
 
     <fieldset class="items-block">
