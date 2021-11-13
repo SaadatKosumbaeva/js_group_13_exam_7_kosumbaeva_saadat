@@ -11,7 +11,6 @@ export class ItemsBlockComponent {
   @Output() itemAdd = new EventEmitter();
 
   clickItem(index: number) {
-    this.items[index].amount++;
     this.itemAdd.emit(index);
   }
 }

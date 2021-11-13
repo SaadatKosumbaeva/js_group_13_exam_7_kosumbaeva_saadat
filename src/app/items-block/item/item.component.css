@@ -1,5 +1,6 @@
 .item-wrap {
   display: flex;
+  align-items: center;
   max-width: 350px;
   min-width: 240px;
   border: 1px solid #000;

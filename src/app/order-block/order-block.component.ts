@@ -23,4 +23,12 @@ export class OrderBlockComponent {
   onDeleteItem(index: number) {
     this.itemDelete.emit(index);
   }
+
+  getTotalPrice() {
+    let sum = 0;
+    this.orderItems.forEach(item => {
+      sum += item.getTotalPrice();
+    })
+    return sum;
+  }
 }

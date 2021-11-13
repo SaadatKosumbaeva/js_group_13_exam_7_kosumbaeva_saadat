@@ -2,6 +2,14 @@
   <p>Order is empty!</p>
   <p>Please add some items!</p>
 </div>
+
 <app-order-item *ngFor="let item of orderItems; let i = index"
                 [item]="item"
-                (itemDelete)="onDeleteItem(i)"></app-order-item>
+                (itemDelete)="onDeleteItem(i)"
+></app-order-item>
+
+<div *ngIf="!orderEmpty()">
+  <hr/>
+  <p>Total price: {{getTotalPrice()}} KGS</p>
+</div>
+
